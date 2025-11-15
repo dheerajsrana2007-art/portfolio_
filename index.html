@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dheeraj singh rana - Portfolio</title>
+</head>
+<style>
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #000;
+        color: #fff;
+        line-height: 1.6;
+    }
+
+    /* Header Styles */
+    header {
+        background-color: #000;
+        color: #00f0ff;
+        text-align: center;
+        padding: 2rem 0;
+        border-bottom: 2px solid #00f0ff;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 0 10px #00f0ff;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        color: #00f0ff;
+    }
+
+    /* Navigation Styles */
+    nav {
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #00f0ff;
+    }
+     nav a {
+        color: #00f0ff;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+    }
+
+    nav a:hover {
+        background-color: #00f0ff;
+        color: #000;
+        box-shadow: 0 0 10px #00f0ff;
+    }
+
+    /* Section Styles */
+    section {
+        padding: 3rem 2rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section h2 {
+        color: #00f0ff;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 0 10px #00f0ff;
+    }
+
+    section p {
+        max-width: 800px;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    /* Home Section */
+    #home {
+        background: linear-gradient(135deg, #000 0%, #001122 100%);
+        position: relative;
+    }
+
+    #home .profile-img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 3px solid #00f0ff;
+        box-shadow: 0 0 20px #00f0ff;
+        margin-bottom: 2rem;
+    }
+
+    #home .tech-icons img {
+        margin: 0 1rem;
+        transition: transform 0.3s ease;
+    }
+
+    #home .tech-icons img:hover {
+        transform: scale(1.1);
+    }
+
+    /* About Section */
+    #about {
+        background-color: #000;
+    }
+
+    /* Skills Section */
+    #skills {
+        background-color: #000;
+    }
+
+    #skills .edu-list,
+    #skills .skills-list,
+    #skills .Achivements-list {
+        list-style: none;
+        margin: 1rem 0;
+        padding: 0;
+        text-align: left;
+        max-width: 600px;
+    }
+
+    #skills .edu-list li,
+    #skills .skills-list li,
+    #skills .Achivements-list li {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        color: #00f0ff;
+        display: flex;
+        align-items: center;
+    }
+
+    #skills .skills-list li img,
+    #skills .Achivements-list li img {
+        margin-right: 0.5rem;
+    }
+
+    #skills h3 {
+        color: #00f0ff;
+        margin: 1.5rem 0 1rem;
+        font-size: 1.5rem;
+    }
+
+    /* Projects Section */
+    #projects {
+        background-color: #000;
+    }
+
+    #projects .project-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        background-color: #001122;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 0 15px #00f0ff;
+        transition: transform 0.3s ease;
+    }
+
+    #projects .project-item:hover {
+        transform: translateY(-5px);
+    }
+
+    #projects .project-item img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+
+    #projects .project-item strong {
+        color: #00f0ff;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #projects .project-item p {
+        text-align: left;
+        color: #fff;
+    }
+
+    /* Contact Section */
+    #contact {
+        background-color: #000;
+    }
+
+    #contact .contact {
+        max-width: 600px;
+        text-align: center;
+    }
+
+    #contact p {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    #contact a {
+        color: #00f0ff;
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    #contact a:hover {
+        color: #fff;
+    }
+
+    #contact .contact img {
+        margin: 0 1rem;
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #000;
+        color: #00f0ff;
+        text-align: center;
+        padding: 1.5rem 0;
+        border-top: 1px solid #00f0ff;
+        font-size: 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 2rem;
+        }
+
+        header p {
+            font-size: 1rem;
+        }
+
+        nav {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav a {
+            margin: 0.5rem 0;
+        }
+
+        section {
+            padding: 2rem 1rem;
+        }
+
+        #home .profile-img {
+            width: 140px;
+            height: 140px;
+        }
+
+        #projects .project-item {
+            padding: 1rem;
+        }
+    }
+
+    /* Additional Animations */
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.7);
+        }
+
+        70% {
+            box-shadow: 0 0 0 10px rgba(0, 240, 255, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba(0, 240, 255, 0);
+        }
+    }
+
+    #home .profile-img,
+    nav a,
+    #projects .project-item {
+        animation: pulse 2s infinite;
+    }
+
+    /* Links and Buttons */
+    a {
+        color: #00f0ff;
+        transition: all 0.3s ease;
+    }
+
+    a:hover {
+        color: #fff;
+        text-shadow: 0 0 10px #00f0ff;
+    }
+
+    /* Lists */
+    ul {
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Text Shadow */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-shadow: 0 0 5px #00f0ff;
+    }
+
+    /* Button Hover Effect */
+    button:hover,
+    input[type="submit"]:hover {
+        background-color: #00f0ff;
+        color: #000;
+        box-shadow: 0 0 10px #00f0ff;
+    }
+
+    /* End of CSS */
+</style>
+
+<body>
+
+    <header>
+        <h1>Dheeraj singh rana</h1>
+        <p>First-Year B.Tech Student | CSE @ DTU</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Education / Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <img src="PHOTO.jpg" alt="Profile Photo" class="profile-img">
+        <div class="tech-icons" style="text-align:center; margin-top:20px;">
+            <img src="https://img.icons8.com/color/96/c-programming.png" width="70">
+            <img src="https://img.icons8.com/color/96/html-5.png" width="70">
+            <img src="https://img.icons8.com/color/96/css3.png" width="70">
+            <img src="https://img.icons8.com/color/96/python.png" width="70">
+            <img src="https://img.icons8.com/color/96/java-coffee-cup-logo.png" width="70">
+        </div>
+
+        <h2>Welcome</h2>
+        <p>Hello! I'm Dheeraj singh rana, a passionate first‑year Computer Science Engineering student at Delhi
+            Technological University (DTU). I love building meaningful projects and exploring the world of programming,
+            web development, and technology.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am currently pursuing my B.Tech in CSE at DTU. I enjoy learning new technologies, improving my coding
+            skills, and working on innovative ideas. I aim to become a skilled developer capable of creating impactful
+            digital solutions.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Education / Skills</h2>
+        <div style="text-align:center; margin-bottom:20px;">
+            <img src="https://img.icons8.com/color/96/school.png" width="80">
+            <img src="https://img.icons8.com/color/96/graduation-cap.png" width="80">
+            <img src="https://img.icons8.com/color/96/university.png" width="80">
+        </div>
+
+        <ul class="edu-list">
+            <li><strong>Salwan Public School (SPS)</strong> – CBSE board Nursery to 12th</li>
+            <li><strong>Salwan Public School (SPS)</strong> – CBSE board 11th and 12th</li>
+            <li><strong>Delhi Technological University (DTU)</strong> – B.Tech in Computer Science Engineering (First
+                Year)</li>
+        </ul>
+
+        <h3>Skills</h3>
+        <ul class="skills-list">
+            <li><img src="https://img.icons8.com/color/48/c-programming.png" width="28"> Programming in C</li>
+            <li><img src="https://img.icons8.com/color/48/html-5.png" width="28"> HTML</li>
+            <li><img src="https://img.icons8.com/color/48/css3.png" width="28"> CSS</li>
+            <li><img src="https://img.icons8.com/color/48/java-coffee-cup-logo.png" width="28"> Java</li>
+            <li><img src="https://img.icons8.com/color/48/python.png" width="28"> Python</li>
+            <li><img src="https://img.icons8.com/fluency/48/source-code.png" width="28"> Problem Solving</li>
+        </ul>
+
+        <h3>Achivements</h3>
+        <ul class="Achivements-list">
+            <div style="text-align:center; margin-bottom:20px;">
+                <img src="https://img.icons8.com/color/96/medal2.png" width="70">
+                <img src="https://img.icons8.com/color/96/prize.png" width="70">
+                <img src="https://img.icons8.com/color/96/trophy.png" width="70">
+            </div>
+
+            <li>91% in 10th cbse board</li>
+            <li>90% in 12th cbse board</li>
+            <li>JEE main qualified</li>
+            <li>JEE advance qualified</li>
+            
+        </ul>
+    </section>
+
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="project-item">
+            <img src="https://img.icons8.com/fluency/512/earth-planet.png">
+            <div>
+                <strong>Gamified Environmental Education Platform</strong>
+                <p>A project focused on educating users about environmental conservation through fun & interactive
+                    gamified tasks.</p>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <img src="https://img.icons8.com/fluency/512/artificial-intelligence.png">
+            <div>
+                <strong>Real-Time Human Detection</strong>
+                <p>Developed using Python + OpenCV. Detects humans in live video streams with bounding boxes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Information</h2>
+        <div style="text-align:center; margin-bottom:20px;">
+            <img src="https://img.icons8.com/fluency/96/email-open.png" width="70">
+            <img src="https://img.icons8.com/fluency/96/linkedin.png" width="70">
+            <img src="https://img.icons8.com/fluency/96/phone.png" width="70">
+        </div>
+
+        <p>Email: <a href="mailto:dheerajsrana2007@gmail.com">dheerajsrana2007@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/dheeraj-singh-rana-035333380" target="_blank">Visit
+                Profile</a></p>
+        <p>phone :7678499284</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dheeraj Singh Rana. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
